@@ -10,8 +10,30 @@ class _AppHomeState extends State<AppHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Aadhar Details Fetcher!',),
-        centerTitle: true,
+        title: Text(
+          'Aadhar Details Fetcher!',
+          style: TextStyle(
+            color: Colors.red,
+          ),
+        ),
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
+      ),
+      extendBodyBehindAppBar: true,
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+              'asset/home.jpg',
+            ),
+            fit: BoxFit.cover,
+          ),
+        ),
+        padding: const EdgeInsets.only(
+          top: 80,
+        ),
       ),
     );
   }
