@@ -34,6 +34,22 @@ class _AppHomeState extends State<AppHome> {
         padding: const EdgeInsets.only(
           top: 80,
         ),
+        child: Center(
+          child: Container(
+            height: 50.0,
+            width: 150.0,
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  offset: Offset(0.0, 20.0),
+                  blurRadius: 30.0,
+                ),
+              ],
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(22.0),
+            ),
+          ),
+        ),
       ),
     );
   }
