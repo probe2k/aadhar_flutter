@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:aadhar_webview/uidai_webview.dart';
 
 class AppHome extends StatefulWidget {
   @override
@@ -36,7 +37,7 @@ class _AppHomeState extends State<AppHome> {
         ),
         child: Center(
           child: InkWell(
-            onTap: () => null,
+            onTap: () => AadharWebview(),
             child: Container(
               width: 150.0,
               decoration: BoxDecoration(
