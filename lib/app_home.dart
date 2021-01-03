@@ -37,7 +37,14 @@ class _AppHomeState extends State<AppHome> {
         ),
         child: Center(
           child: InkWell(
-            onTap: () => AadharWebview(),
+            onTap: () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (BuildContext context) => AadharWebview(),
+                ),
+              ),
+            },
             child: Container(
               width: 150.0,
               decoration: BoxDecoration(
