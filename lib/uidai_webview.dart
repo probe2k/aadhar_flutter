@@ -3,7 +3,7 @@ import 'package:webview_flutter/webview_flutter.dart';
 import 'dart:async';
 
 class AadharWebView extends StatelessWidget {
-  String url;
+  final String url;
 
   AadharWebView({this.url});
 
