@@ -41,7 +41,7 @@ class _AppHomeState extends State<AppHome> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (BuildContext context) => AadharWebview(),
+                  builder: (BuildContext context) => AadharWebView(),
                 ),
               ),
             },
