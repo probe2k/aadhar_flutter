@@ -66,8 +66,8 @@ class _AppHomeState extends State<AppHome> {
               child: Row(
                 children: [
                   Container(
-                    height: 50.0,
-                    width: 110.0,
+                    height: 40.0,
+                    width: 105.0,
                     padding: const EdgeInsets.symmetric(
                       vertical: 12.0,
                       horizontal: 24.0,
