@@ -12,7 +12,7 @@ class _AppHomeState extends State<AppHome> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Aadhar Details Fetcher!',
+          'Aadhar Details\nFetcher!',
           style: TextStyle(
             color: Colors.red,
           ),
@@ -66,14 +66,14 @@ class _AppHomeState extends State<AppHome> {
               child: Row(
                 children: [
                   Container(
-                    height: 40.0,
-                    width: 105.0,
+                    height: 60.0,
+                    width: 110.0,
                     padding: const EdgeInsets.symmetric(
                       vertical: 12.0,
                       horizontal: 24.0,
                     ),
                     child: Text(
-                      'Button',
+                      'Check Status',
                       style: Theme.of(context).textTheme.button.apply(
                             color: Colors.black,
                           ),
@@ -94,7 +94,7 @@ class _AppHomeState extends State<AppHome> {
                     ),
                   ),
                   Icon(
-                    Icons.home,
+                    Icons.search,
                     size: 30,
                   ),
                 ],
