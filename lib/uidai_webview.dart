@@ -28,8 +28,10 @@ class AadharWebView extends StatelessWidget {
               _controller.complete(webViewController);
             },
             navigationDelegate: (NavigationRequest request) {
-              print('allowing navigation to $request');
-              return NavigationDecision.navigate;
+              if (request.url.startsWith('https://resident.uidai')) {
+                return NavigationDecision.navigate;
+              }
+              return NavigationDecision.prevent;
             },
             onPageStarted: (String url) {
               print('Page loading: $url');
