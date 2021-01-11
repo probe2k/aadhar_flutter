@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'dart:async';
+import 'package:html/parser.dart';
+
 
 class AadharWebView extends StatelessWidget {
   final String url;
 
   AadharWebView({this.url});
 
-  final Completer<WebViewController> _controller =
-      Completer<WebViewController>();
+  WebViewController _controller;
 
   @override
   Widget build(BuildContext context) {
@@ -25,10 +26,11 @@ class AadharWebView extends StatelessWidget {
             initialUrl: 'https://resident.uidai.gov.in/verify',
             javascriptMode: JavascriptMode.unrestricted,
             onWebViewCreated: (WebViewController webViewController) {
-              _controller.complete(webViewController);
+              _controller = webViewController;
             },
             navigationDelegate: (NavigationRequest request) {
               if (request.url.startsWith('https://resident.uidai')) {
+                fetchData();
                 return NavigationDecision.navigate;
               }
               return NavigationDecision.prevent;
@@ -44,5 +46,11 @@ class AadharWebView extends StatelessWidget {
         },
       ),
     );
+  }
+
+  void fetchData() async {
+    String data = await _controller.evaluateJavascript('document.documentElement.innerHTML');
+    var dom = parse(data);
+    print(dom.getElementById('pt-2').innerHtml);
   }
 }
