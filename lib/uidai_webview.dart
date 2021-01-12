@@ -3,7 +3,6 @@ import 'package:webview_flutter/webview_flutter.dart';
 import 'dart:async';
 import 'package:html/parser.dart';
 
-
 class AadharWebView extends StatelessWidget {
   final String url;
 
@@ -49,7 +48,8 @@ class AadharWebView extends StatelessWidget {
   }
 
   void fetchData() async {
-    String data = await _controller.evaluateJavascript('document.documentElement.innerHTML');
+    String data = await _controller
+        .evaluateJavascript('document.documentElement.innerHTML');
     var dom = parse(data);
     print(dom.getElementById('pt-2').innerHtml);
   }

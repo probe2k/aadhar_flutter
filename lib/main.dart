@@ -11,7 +11,9 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.grey,
         scaffoldBackgroundColor: Colors.black,
         buttonTheme: ButtonThemeData(
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18.0),),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(18.0),
+          ),
           buttonColor: Colors.purpleAccent,
         ),
       ),
